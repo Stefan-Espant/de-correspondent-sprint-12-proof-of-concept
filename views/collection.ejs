@@ -1,0 +1,124 @@
+<%- include('./partials/head') %>
+
+<!-- Header van de overzichtspagina -->
+<%- include('./partials/header') %>
+<body style="background-color: #<%= item.attributes.style.backgroundColor %>;">
+
+<!-- Main van de overzichtspagina -->
+<main class="collection">
+	<section class="collection-index">
+		<article>
+			<picture>
+				<img
+					srcset="/public/<%= imageFiles[mainVisuals[item.relationships.mainVisual.data.id]] %>"
+				/>
+			</picture>
+		</article>
+		<article>
+			<span class="breadcrumbles">
+				<a href="/">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon icon-tabler icon-tabler-home"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="currentColor"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path
+							stroke="none"
+							d="M0 0h24v24H0z"
+							fill="none"
+						></path>
+						<path d="M5 12l-2 0l9 -9l9 9l-2 0"></path>
+						<path
+							d="M5 12v7a2 2 0 0 0 2 2h10a2 2 0 0 0 2 -2v-7"
+						></path>
+						<path
+							d="M9 21v-6a2 2 0 0 1 2 -2h2a2 2 0 0 1 2 2v6"
+						></path>
+					</svg>
+				</a>
+				›
+				<p href=""><%= item.attributes.title %></p>
+			</span>
+			<h1><%= item.attributes.title %></h1>
+            <h2><%= item.attributes.subtitle %></h2>
+			<p><%= item.attributes.intro %></p>
+		</article>
+	</section>
+	<section class="collection-episodes">
+		<div>
+			<h1>Alle afleveringen</h1>
+		</div>
+		<% if (itemData && itemData.data &&
+		itemData.data.length) { %>
+		<ul>
+			<% itemData.data.forEach(item => { %>
+			<li>
+				<span>
+					<h2><%= item.attributes.title %></h2>
+				</span>
+				<button type="button" title="afspelen">
+					<svg
+						xmlns="http://www.w3.org/2000/svg"
+						class="icon icon-tabler icon-tabler-player-play"
+						width="24"
+						height="24"
+						viewBox="0 0 24 24"
+						stroke-width="2"
+						stroke="currentColor"
+						fill="none"
+						stroke-linecap="round"
+						stroke-linejoin="round"
+					>
+						<path
+							stroke="none"
+							d="M0 0h24v24H0z"
+							fill="none"
+						></path>
+						<path d="M7 4v16l13 -8z"></path>
+					</svg>
+				</button>
+			</li>
+			<% }) %>
+		</ul>
+		<% } %>
+	</section>
+</main>
+<footer>
+	<h1>Speel de aflevering af</h1>
+		<button class="button-play" title="afspelen">
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-player-play-filled"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+                    hidden
+				>
+					<path
+						stroke="none"
+						d="M0 0h24v24H0z"
+						fill="none"
+					></path>
+					<path
+						d="M6 4v16a1 1 0 0 0 1.524 .852l13 -8a1 1 0 0 0 0 -1.704l-13 -8a1 1 0 0 0 -1.524 .852z"
+						stroke-width="0"
+						fill="currentColor"
+					></path>
+				</svg>
+		</button>
+	<progress value="70" max="100"></progress>
+</footer>
+
+<%- include('./partials/foot') %>
