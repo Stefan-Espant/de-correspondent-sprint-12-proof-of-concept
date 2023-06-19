@@ -73,6 +73,8 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 
 [geluidseffect](https://pixabay.com/sound-effects/search/click/)
 
+[Afbeelding naar tekst converter](https://www.imagetotext.info/)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
