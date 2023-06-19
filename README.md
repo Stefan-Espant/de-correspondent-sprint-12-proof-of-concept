@@ -1,7 +1,6 @@
-> _Fork_ deze leertaak en ga aan de slag. Onderstaande outline ga je gedurende deze taak in jouw eigen GitHub omgeving uitwerken. De instructie vind je in: [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
-
-# Titel
+# Podcast applicatie - de Correspondent
 <!-- Geef je project een titel en schrijf in één zin wat het is -->
+In deze repository is gewerkt aan een webapplicatie die podcasts aanbied aan de leden van De Correspondent.
 
 ## Inhoudsopgave
 
@@ -17,16 +16,62 @@
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
+<img width="1440" alt="Schermafbeelding 2023-06-19 om 07 59 45" src="https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/def17bd5-b379-45cf-9862-ad88a274c9ab">
+
+https://sprint-12-de-correspondent.onrender.com/
+
+Dit project is de webversie van de native app van de Correspondent. De functie van deze webapplicatie is het te beluisteren naar diverse podcasts. 
+
 ## Gebruik
 <!-- Bij Gebruik staat de user story, hoe het werkt en wat je er mee kan. -->
+De user stories die werden toegepast luidden alsvolgt:
+* Als gebruiker wil ik een overzicht van alle podcasts
+* Als gebruiker wil ik zien of de podcast app getest is op toegankelijkheid
+* Als ontwikkelaar wil ik de API gekoppeld hebben aan de site zodat data correct word ingeladen
+
+Gebruikers van de Correspondent kunnen shows uitkiezen waarnaar ze kunnen luisteren. Voor de ontwikkelaar is de gekregen API gekoppeld zodat de data correct word ingeladen en dat zo de site dynamisch word gemaakt.
 
 ## Kenmerken
 <!-- Bij Kenmerken staat welke technieken zijn gebruikt en hoe. Wat is de HTML structuur? Wat zijn de belangrijkste dingen in CSS? Wat is er met JS gedaan en hoe? Misschien heb je iets met NodeJS gedaan, of heb je een framwork of library gebruikt? -->
+Voor dit project zijn de volgende technieken toegepast:
+* html
+* css
+* javascript
+* node
+* express
+
+### html
+
+### css
+
+### javascript
+
+### node
+
+### express
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
+In dit project is gebruik gemaakt van onder anderen:
+* Node
+* Express
+* EJS
+
+Voor het installeren van node gebruikte ik het commando `npm init` om node te initialiseren. Volgens 
+
+Deze modules kunnen geinstalleerd worden doormiddel van:
+`npm install` `express` `ejs`
+
+Om de applicatie te laten werken, voer dan het volgende commando uit:
+`npm start`
 
 ## Bronnen
+[docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+
+[caniuse.com](https://caniuse.com/)
+
+[geluidseffect](https://pixabay.com/sound-effects/search/click/)
 
 ## Licentie
 
