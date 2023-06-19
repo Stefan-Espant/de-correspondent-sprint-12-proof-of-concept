@@ -91,6 +91,17 @@ li {
     list-style: none;
 }
 
+.index-animation {
+    width: 20em;
+    margin: 0 auto;
+}
+
+.index-animation lottie-player {
+    width: 100%;
+    height: auto;
+    padding: 1em;
+}
+
 .index {
     width: 20em;
     display: flex;
@@ -104,8 +115,12 @@ li {
     flex-wrap: wrap;
 }
 
+.index h2 {
+    visibility: hidden;
+    position: absolute;
+}
+
 .index-title {
-    width: 20em;
     margin: auto;
     padding: var(--u-default);
     text-align: left;
@@ -395,7 +410,7 @@ h1, h2, h3, p {
 }
 
 h1 {
-    font-size: 2.25em;
+    font-size: var(--u-large);
     line-height: 1.4;
     margin-bottom: 0;
 }
@@ -493,8 +508,10 @@ em {
                             "second-cta second-cta";
     }   
 
-    .index-title {
+    .index-animation {
         width: 40em;
+        display: flex;
+        margin: var(--u-large) auto;
     }
 
     .collection section {
@@ -526,10 +543,9 @@ em {
         flex-wrap: wrap;
     }   
 
-    .index-title {
+    .index-animation {
         width: 60em;
     }
-
 
     .index article:nth-child(1) {
         width: 38em;

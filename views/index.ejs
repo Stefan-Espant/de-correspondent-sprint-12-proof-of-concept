@@ -5,9 +5,13 @@
 
 <!-- Inhoud met diverse podcasts -->
 <main>
-	<div class="index-title">
-		<h1>Luister naar de <em>nieuwste</em>  podcasts:</h1>
-	</div>
+	<section class="index-animation">
+		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
+		<lottie-player src="https://assets9.lottiefiles.com/packages/lf20_JjpNLdaKYX.json"  background="transparent"  speed="1" loop autoplay></lottie-player>
+		<div class="index-title">
+			<h1>Luister naar de <em>nieuwste</em>  podcasts:</h1>
+		</div>
+	</section>
 	<section class="index">
 	<!-- Genereert alle shows -->
 	<% if (data && data.length) { %>
@@ -25,7 +29,7 @@
 					<svg xmlns="http://www.w3.org/2000/svg" class="icon icon-tabler icon-tabler-player-play" width="24" height="24" viewBox="0 0 24 24" stroke-width="2" stroke="currentColor" fill="none" stroke-linecap="round" stroke-linejoin="round">
 						<path stroke="none" d="M0 0h24v24H0z" fill="none"></path>
 						<path d="M7 4v16l13 -8z"></path>
-					</svg>
+					</svg> 
 				</a>
 			</article>
 		<% }); %>
