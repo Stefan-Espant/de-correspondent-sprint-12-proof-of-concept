@@ -68,22 +68,22 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 
 ## Bronnen
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
+(docs/INSTRUCTIONS.md)
 
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md][caniuse.com](https://caniuse.com/)
+[caniuse.com](https://caniuse.com/)
 
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md][geluidseffect](https://pixabay.com/sound-effects/search/click/)
+[geluidseffect](https://pixabay.com/sound-effects/search/click/)
 
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md][Afbeelding naar tekst converter](https://www.imagetotext.info/)
+[Afbeelding naar tekst converter](https://www.imagetotext.info/)
 
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md][Simulatie brillen](https://nl.optelec.com/oogaandoeningen)
+[Simulatie brillen](https://nl.optelec.com/oogaandoeningen)
 
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
-[docs/INSTRUCTIONS.md][Tutorial view transition](https://www.youtube.com/watch?v=HNXmgR4Y8k4)
+[Tutorial view transition](https://www.youtube.com/watch?v=HNXmgR4Y8k4)
 
 ## Licentie
 
