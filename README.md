@@ -77,6 +77,8 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 
 [Simulatie brillen](https://nl.optelec.com/oogaandoeningen)
 
+[Tutorial view transition](https://www.youtube.com/watch?v=HNXmgR4Y8k4)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
