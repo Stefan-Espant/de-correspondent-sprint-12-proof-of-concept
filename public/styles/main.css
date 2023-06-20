@@ -530,11 +530,8 @@ em {
 
     .collection .collection-index img {
         width: 12em;
-    }
-    
+    } 
 }
-
-
 
 @media (min-width: 67.5em ) {
     .index {
