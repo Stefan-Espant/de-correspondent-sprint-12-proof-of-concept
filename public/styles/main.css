@@ -115,11 +115,6 @@ li {
     flex-wrap: wrap;
 }
 
-.index h2 {
-    visibility: hidden;
-    position: absolute;
-}
-
 .index-title {
     margin: auto;
     padding: var(--u-default);
@@ -344,11 +339,15 @@ a:hover {
 }
 a:focus {
     border: 1px solid var(--color-secundary-150);
-    padding: 0.25em 1em 0.25em 0.25em;
+    padding: 0.25em var(--u-default) 0.25em var(--u-default);
 }
 
 a:focus-visible {
     outline: none;
+}
+
+.link-retro {
+    display: block;
 }
 
 button {
@@ -592,28 +591,14 @@ em {
 }
 
 /* View transition */
-@keyframes fade-in {
-    from { opacity: 0; }
-  }
-  
-  @keyframes fade-out {
-    to { opacity: 0; }
-  }
-  
-  @keyframes slide-from-right {
-    from { transform: translateX(30px); }
-  }
-  
-  @keyframes slide-to-left {
-    to { transform: translateX(-30px); }
-  }
+@supports (view-transition-name) {
 
-::view-transition-old(root) {
-    animation: 90ms cubic-bezier(0.4, 0, 1, 1) both fade-out,
-      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-to-left;
-  }
-  
-  ::view-transition-new(root) {
-    animation: 210ms cubic-bezier(0, 0, 0.2, 1) 90ms both fade-in,
-      300ms cubic-bezier(0.4, 0, 0.2, 1) both slide-from-right;
-  }
+picture {
+    view-transition-name: show-image;
+    contain: layout;
+}
+}
+
+::view-transition-group(show-image) {
+    animation-duration: 10s;
+}
