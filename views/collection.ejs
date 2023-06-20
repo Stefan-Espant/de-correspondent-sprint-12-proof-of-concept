@@ -9,14 +9,14 @@
 	<section class="collection-index">
 		<article>
 			<picture>
-				<img
+				<img alt="Hoofdfoto van <%= item.attributes.title %>"
 					srcset="/public/<%= imageFiles[mainVisuals[item.relationships.mainVisual.data.id]] %>"
 				/>
 			</picture>
 		</article>
 		<article>
 			<span class="breadcrumbles">
-				<a class="link-retro" href="/">
+				<a class="link-retro" title="Ga terug naar de overzichtspagina" href="/">
 					<svg
 						xmlns="http://www.w3.org/2000/svg"
 						class="icon icon-tabler icon-tabler-home"
