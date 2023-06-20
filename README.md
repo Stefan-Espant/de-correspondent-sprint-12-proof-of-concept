@@ -75,6 +75,8 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 
 [Afbeelding naar tekst converter](https://www.imagetotext.info/)
 
+[Simulatie brillen](https://nl.optelec.com/oogaandoeningen)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
