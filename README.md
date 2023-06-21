@@ -180,6 +180,8 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 ![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
 [Tutorial view transition](https://www.youtube.com/watch?v=HNXmgR4Y8k4)
 
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)[LottieFiles Animtatie](https://lottiefiles.com/118830-people-with-microphones-record-podcast-in-studio)
+
 ## Licentie
 
 This project is licensed under the terms of the [MIT license](./LICENSE).
