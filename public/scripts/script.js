@@ -1,3 +1,5 @@
+document.documentElement.classList.add("javascriptEnabled")
+
 const interfaceSound = new Audio(
 	"./assets/interface-124464.mp3"
 );

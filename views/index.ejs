@@ -5,21 +5,7 @@
 
 <!-- Inhoud met diverse podcasts -->
 <main>
-	<section class="index-animation">
-		<script src="https://unpkg.com/@lottiefiles/lottie-player@latest/dist/lottie-player.js"></script>
-		<lottie-player
-			src="https://assets9.lottiefiles.com/packages/lf20_JjpNLdaKYX.json"
-			background="transparent"
-			speed="1"
-			loop
-			autoplay
-			width="400"
-			height="400"
-		></lottie-player>
-		<div class="index-title">
-			<h1>Luister naar de <em>nieuwste</em> podcasts:</h1>
-		</div>
-	</section>
+	<%- include('./partials/index-animation') %>
 	<section class="index">
 		<!-- Genereert alle shows -->
 		<% if (data && data.length) { %> <%

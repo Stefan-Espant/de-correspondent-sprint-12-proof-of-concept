@@ -60,7 +60,7 @@ app.get("/", (request, response) => {
       response.render("index", {
         ...data,
         mainVisuals: mainVisuals,
-        imageFiles: imageFiles,
+        imageFiles: imageFiles
       });
     });
   });

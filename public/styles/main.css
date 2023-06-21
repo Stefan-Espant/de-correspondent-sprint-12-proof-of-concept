@@ -48,8 +48,6 @@
 
     /* Schaduwen en effecten */
     --shadow-default: 0px 1px var(--u-micro) rgba(0, 0, 0, 0.1), 0px var(--u-micro) var(--u-micro) -2px rgba(0, 0, 0, 0.12), 0px 10px 12px -5px rgba(0, 0, 0, 0.2);
-    --shadow-invert:  
-
 }
 
 body {
@@ -94,12 +92,22 @@ li {
 .index-animation {
     width: 20em;
     margin: 0 auto;
+    position: static;
+}
+
+.index-animation div:first-child {
+    width: inherit;
+    position: relative;
 }
 
 .index-animation lottie-player {
     width: 100%;
     height: auto;
     padding: var(--u-default);
+}
+
+.index-animation svg {
+    width: 100%;
 }
 
 .index {
@@ -599,6 +607,20 @@ picture {
 }
 }
 
-::view-transition-group(show-image) {
+/* ::view-transition-group(show-image) {
     animation-duration: 10s;
+} */
+
+/* Laat SVG illustratie zien wanneer LottieFiles animatie niet getoond kan worden */
+
+lottie-player {
+    display: none;
+}
+
+.javascriptEnabled lottie-player {
+    display: block;
+}
+
+.javascriptEnabled .lottie-placeholder {
+    display: none;
 }
