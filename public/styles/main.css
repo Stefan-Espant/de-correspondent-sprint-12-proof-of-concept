@@ -155,6 +155,7 @@ li {
 
 picture {
     width: 15.75em;
+    hei
     background-color: var(--color-secundary-100);
     border-radius: var(--u-micro);
 }
@@ -164,7 +165,7 @@ picture {
     height: 15.75em;
     aspect-ratio: 1/1;
     object-fit: cover;
-    background-color: var(--color-secundary-75);
+    background-color: var(--color-secundary-100);
     border-radius: var(--u-micro);
 }
 
