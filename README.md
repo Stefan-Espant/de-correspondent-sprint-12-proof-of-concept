@@ -45,6 +45,46 @@ Voor dit project zijn de volgende technieken toegepast:
 ### css
 
 ### javascript
+Dit project bevat, naast node, ook client-side javascript. Het bevat een enhancement op de links die linken naar de detailpagina en terug naar de homepage. De enhancement is een geluidseffect wanneer de gebruiker klikt.
+
+Deze code verzorgt het geluidseffect voor de link naar de detailpagina.
+```js
+const interfaceSound = new Audio(
+	"./assets/interface-124464.mp3"
+);
+const interfaceClicks =
+	document.querySelectorAll(".default-link");
+
+interfaceClicks.forEach((interfaceClick) => {
+	interfaceClick.addEventListener("click", (event) => {
+		event.preventDefault(); // Voorkomt dat de standaard linkactie wordt uitgevoerd
+
+		interfaceSound.play();
+
+		setTimeout(() => {
+			window.location.href = event.target.href; // Doorsturen naar de volgende pagina
+		}, 800); // Wacht 0.8 seconden voordat de doorstuuring plaatsvindt
+	});
+});
+```
+
+Deze onderstaande code het geluidseffect voor de link naar de homepage terug.
+
+```js
+const interfaceBackSound = new Audio(
+	"../assets/interface-124476.mp3"
+);
+const interfaceBackClick =
+	document.querySelector(".link-retro");
+
+interfaceBackClick.addEventListener("click", (event) => {
+	interfaceBackSound.play();
+
+	setTimeout(() => {
+		window.location.href = event.target.href; // Doorsturen naar de volgende pagina
+	}, 600); // Wacht 0.6 seconden voordat de doorstuuring plaatsvindt
+});
+```
 
 ### node
 
