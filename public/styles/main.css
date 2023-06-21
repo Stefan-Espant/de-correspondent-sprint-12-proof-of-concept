@@ -10,7 +10,7 @@
 }
 
 ::selection {
-    background-color: #df5b57;
+    background-color: var(--color-primary);
     color: #eaf6f5;
 }
 
@@ -47,7 +47,7 @@
     --u-round: 50%;
 
     /* Schaduwen en effecten */
-    --shadow-default: 0px 1px 4px rgba(0, 0, 0, 0.1), 0px 4px 4px -2px rgba(0, 0, 0, 0.12), 0px 10px 12px -5px rgba(0, 0, 0, 0.2);
+    --shadow-default: 0px 1px var(--u-micro) rgba(0, 0, 0, 0.1), 0px var(--u-micro) var(--u-micro) -2px rgba(0, 0, 0, 0.12), 0px 10px 12px -5px rgba(0, 0, 0, 0.2);
     --shadow-invert:  
 
 }
@@ -55,7 +55,7 @@
 body {
     background-color: var(--color-secundary-75);
     font-family: 'Bree-Regular', sans-serif;
-    font-size: 1em;
+    font-size: var(--u-default);
     line-height: 1.4;
 }
 
@@ -99,7 +99,7 @@ li {
 .index-animation lottie-player {
     width: 100%;
     height: auto;
-    padding: 1em;
+    padding: var(--u-default);
 }
 
 .index {
@@ -208,7 +208,7 @@ li {
     display: flex;
     align-items: center;
     justify-content: start;
-    gap: 0.5em;
+    gap: var(--u-medium);
     margin-bottom: var(--u-default);
 }
 
@@ -247,7 +247,7 @@ li {
 .collection-episodes ul {
     display: grid;
     grid-area: ul;
-    grid-gap: 1em;
+    grid-gap: var(--u-default);
 }
 
 .collection-episodes li {
@@ -309,7 +309,7 @@ progress {
     background-color: var(--color-secundary-50);
     border: none;
     border-radius: var(--u-micro);
-    margin: 1em;
+    margin: var(--u-default);
 } 
 
 a {
@@ -335,11 +335,11 @@ a svg {
 
 a:hover {
     border: 1px solid var(--color-secundary-100);
-    padding: 0.25em 1em 0.25em 0.75em;
+    padding: var(--u-micro) var(--u-default) var(--u-micro) 0.75em;
 }
 a:focus {
     border: 1px solid var(--color-secundary-150);
-    padding: 0.25em var(--u-default) 0.25em var(--u-default);
+    padding: var(--u-micro) var(--u-default) var(--u-micro) var(--u-default);
 }
 
 a:focus-visible {
@@ -415,7 +415,7 @@ h1 {
 }
 
 h1 + h2 {
-    margin-bottom: 0.5em;
+    margin-bottom: var(--u-medium);
 }
 
 h2 {
