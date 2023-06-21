@@ -16,7 +16,8 @@ In deze repository is gewerkt aan een webapplicatie die podcasts aanbied aan de 
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-<img width="1440" alt="Schermafbeelding 2023-06-19 om 07 59 45" src="https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/d5188b5c-5f56-438e-9fe2-6ea36398c9cf">
+![Schermafbeelding 2023-06-20 om 14 45 53](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/26b8d64f-0ec4-414b-904f-e81a755a7c62)
+
 
 https://sprint-12-de-correspondent.onrender.com/
 
