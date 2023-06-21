@@ -646,5 +646,5 @@ lottie-player {
 }
 
 .javascriptEnabled .lottie-placeholder {
-    display: block;
+    display: none;
 }
