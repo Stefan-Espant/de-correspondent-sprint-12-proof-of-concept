@@ -207,7 +207,82 @@ interfaceBackClick.addEventListener("click", (event) => {
 ### node
 Dit project gebruikt node als basis. Hierin heb ik verschillende routes aangemaakt voor de pagina's met behulp van `express`
 
+Zo maakte ik een GET-request aan voor de index pagina:
 
+```js
+// Definieer de route voor de hoofdpagina ("/")
+app.get("/", (request, response) => {
+    // Fetch the data from the url
+    fetchJson(collectionsJson).then((data) => {
+      var mainVisuals = {};
+      var imageFiles = {};
+  
+      // Loop door alle included variabelen heen
+      data.included.forEach((element) => {
+        if (element.type == "MainVisual") {
+          mainVisuals[element.id] = element.relationships.image.data.id;
+        } else if (element.type == "ImageFile") {
+          imageFiles[element.id] = element.attributes.sourceSet;
+        }
+      });
+  
+      response.render("index", {
+        ...data,
+        mainVisuals: mainVisuals,
+        imageFiles: imageFiles
+      });
+    });
+  });
+```
+
+Ook zette ik een complexere detailpagina op en maakte daar een GET request voor:
+
+```js
+// Definieer de route voor de overzichtspagina ("/collection/:slug")
+  app.get("/collection/:slug", (request, response) => {
+    const slug = request.params.slug;
+  
+    fetchJson(collectionsJson).then((data) => {
+      const collections = data.data;
+      const item = collections.find(
+        (collection) => collection.attributes.slug === slug
+      );
+  
+      if (item) {
+        const itemId = item.id;
+        const itemJsonUrl = `https://raw.githubusercontent.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/main/course/collection/${itemId}.json`;
+
+        fetchJson(itemJsonUrl).then((itemData) => {
+          // Fetch main visuals and image files
+          var mainVisuals = {};
+          var imageFiles = {};
+  
+          data.included.forEach((element) => {
+            if (element.type === "MainVisual") {
+              mainVisuals[element.id] = element.relationships.image.data.id;
+            } else if (element.type === "ImageFile") {
+              imageFiles[element.id] = element.attributes.sourceSet;
+            }
+          });
+
+          fetchJson(collectionsJson).then((data) => {
+            })
+  
+          const message = "De Correspondent - " + item.attributes.title;
+          response.render("collection", {
+            ...data,
+            item,
+            itemData,
+            message,
+            mainVisuals,
+            imageFiles,
+          });
+          console.log(itemJsonUrl)
+        });
+      }
+    });
+  });
+```
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
