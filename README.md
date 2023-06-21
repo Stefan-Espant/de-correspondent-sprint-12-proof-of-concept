@@ -16,7 +16,8 @@ In deze repository is gewerkt aan een webapplicatie die podcasts aanbied aan de 
 <!-- Voeg een mooie poster visual toe 📸 -->
 <!-- Voeg een link toe naar Github Pages 🌐-->
 
-<img width="1440" alt="Schermafbeelding 2023-06-19 om 07 59 45" src="https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/d5188b5c-5f56-438e-9fe2-6ea36398c9cf">
+![Schermafbeelding 2023-06-20 om 14 45 53](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/26b8d64f-0ec4-414b-904f-e81a755a7c62)
+
 
 https://sprint-12-de-correspondent.onrender.com/
 
@@ -41,15 +42,109 @@ Voor dit project zijn de volgende technieken toegepast:
 * express
 
 ### html
+De html in dit project is opgebouwd met een javascript template genaamd ejs. Hierdoor was onder anderen het laden van item in een array mogelijk op de homepage.
+
+```html
+		<% if (data && data.length) { %> <%
+		data.forEach(collection => { %>
+		<article>
+			<picture>
+				<source
+					srcset="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>"
+					alt="<%= collection.attributes.title %>"
+					width="320"
+					height="320"
+					loading="lazy"
+				/>
+				<img
+					src="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>"
+					alt="<%= collection.attributes.title %>"
+					width="320"
+					height="320"
+					loading="lazy"
+				/>
+			</picture>
+
+			<h2><%= collection.attributes.title %></h2>
+			<p><%= collection.attributes.intro %></p>
+			<a
+				id="<%= collection.attributes.slug %>"
+				class="default-link"
+				href="/collection/<%= collection.attributes.slug %>"
+			>
+				Ga naar deze show
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-player-play"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path
+						stroke="none"
+						d="M0 0h24v24H0z"
+						fill="none"
+					></path>
+					<path d="M7 4v16l13 -8z"></path>
+				</svg>
+			</a>
+		</article>
+		<% }); %> <% } %>
+```
+
+
 
 ### css
 
 ### javascript
+Dit project bevat, naast node, ook client-side javascript. Het bevat een enhancement op de links die linken naar de detailpagina en terug naar de homepage. De enhancement is een geluidseffect wanneer de gebruiker klikt.
+
+Deze code verzorgt het geluidseffect voor de link naar de detailpagina.
+```js
+const interfaceSound = new Audio(
+	"./assets/interface-124464.mp3"
+);
+const interfaceClicks =
+	document.querySelectorAll(".default-link");
+
+interfaceClicks.forEach((interfaceClick) => {
+	interfaceClick.addEventListener("click", (event) => {
+		event.preventDefault(); // Voorkomt dat de standaard linkactie wordt uitgevoerd
+
+		interfaceSound.play();
+
+		setTimeout(() => {
+			window.location.href = event.target.href; // Doorsturen naar de volgende pagina
+		}, 800); // Wacht 0.8 seconden voordat de doorstuuring plaatsvindt
+	});
+});
+```
+
+Deze onderstaande code het geluidseffect voor de link naar de homepage terug.
+
+```js
+const interfaceBackSound = new Audio(
+	"../assets/interface-124476.mp3"
+);
+const interfaceBackClick =
+	document.querySelector(".link-retro");
+
+interfaceBackClick.addEventListener("click", (event) => {
+	interfaceBackSound.play();
+
+	setTimeout(() => {
+		window.location.href = event.target.href; // Doorsturen naar de volgende pagina
+	}, 600); // Wacht 0.6 seconden voordat de doorstuuring plaatsvindt
+});
+```
 
 ### node
-
-### express
-
+Dit project gebruikt node als basis
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
@@ -67,13 +162,23 @@ Om de applicatie te laten werken, voer dan het volgende commando uit:
 `npm start`
 
 ## Bronnen
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
 [docs/INSTRUCTIONS.md](docs/INSTRUCTIONS.md)
 
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
 [caniuse.com](https://caniuse.com/)
 
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
 [geluidseffect](https://pixabay.com/sound-effects/search/click/)
 
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
 [Afbeelding naar tekst converter](https://www.imagetotext.info/)
+
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
+[Simulatie brillen](https://nl.optelec.com/oogaandoeningen)
+
+![file-info](https://github.com/Stefan-Espant/de-correspondent-sprint-12-proof-of-concept/assets/89298385/bc2c8e9d-64e6-47a4-917d-8c657887320e)
+[Tutorial view transition](https://www.youtube.com/watch?v=HNXmgR4Y8k4)
 
 ## Licentie
 
