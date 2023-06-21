@@ -613,6 +613,15 @@ picture {
 
 /* Laat SVG illustratie zien wanneer LottieFiles animatie niet getoond kan worden */
 
+@supports (display: lottie-player) {
+    lottie-player {
+        display: block;
+    }
+
+    .javascriptEnabled .lottie-placeholder {
+        display: none;
+    }
+}
 lottie-player {
     display: none;
 }
