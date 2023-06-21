@@ -153,6 +153,12 @@ li {
     transition: var(--a-default) ease-in;
 }
 
+picture {
+    width: 15.75em;
+    background-color: var(--color-secundary-100);
+    border-radius: var(--u-micro);
+}
+
 .index article img {
     width: 15.75em;
     height: 15.75em;
