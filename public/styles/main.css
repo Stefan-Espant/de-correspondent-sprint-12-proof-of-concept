@@ -104,10 +104,15 @@ li {
     width: 100%;
     height: auto;
     padding: var(--u-default);
+    background-color: var(--color-secundary-75);
 }
 
 .index-animation svg {
     width: 100%;
+    position: absolute;
+    top: 1.5em;
+    padding: 0rem;
+    z-index: -1;
 }
 
 .index {
@@ -624,10 +629,12 @@ picture {
 }
 lottie-player {
     display: none;
+    opacity: 0;
 }
 
 .javascriptEnabled lottie-player {
     display: block;
+    opacity: 1;
 }
 
 .javascriptEnabled .lottie-placeholder {
