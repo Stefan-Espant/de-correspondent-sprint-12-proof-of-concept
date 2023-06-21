@@ -136,7 +136,6 @@ li {
 
 .index article {
     width: 18em;
-    aspect-ratio: 4/5;
     text-wrap: balance;
     padding: var(--u-default);
     background-color: var(--color-secundary-0);
