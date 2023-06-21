@@ -165,6 +165,7 @@ Niet alleen voor de default stijl, maar ook voor de dark mode.
 Dit project bevat, naast node, ook client-side javascript. Het bevat een enhancement op de links die linken naar de detailpagina en terug naar de homepage. De enhancement is een geluidseffect wanneer de gebruiker klikt.
 
 Deze code verzorgt het geluidseffect voor de link naar de detailpagina.
+
 ```js
 const interfaceSound = new Audio(
 	"./assets/interface-124464.mp3"
@@ -204,7 +205,9 @@ interfaceBackClick.addEventListener("click", (event) => {
 ```
 
 ### node
-Dit project gebruikt node als basis
+Dit project gebruikt node als basis. Hierin heb ik verschillende routes aangemaakt voor de pagina's met behulp van `express`
+
+
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
