@@ -109,9 +109,10 @@ li {
 
 .index-animation svg {
     width: 100%;
-    position: absolute;
-    top: 1.5em;
+    height: fit-content;
     padding: 0rem;
+    position: sticky;
+    top: 0;
     z-index: -1;
 }
 
@@ -645,5 +646,5 @@ lottie-player {
 }
 
 .javascriptEnabled .lottie-placeholder {
-    display: none;
+    display: block;
 }
