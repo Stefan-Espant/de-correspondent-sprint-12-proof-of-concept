@@ -41,6 +41,62 @@ Voor dit project zijn de volgende technieken toegepast:
 * express
 
 ### html
+De html in dit project is opgebouwd met een javascript template genaamd ejs. Hierdoor was onder anderen het laden van item in een array mogelijk op de homepage.
+
+```html
+		<% if (data && data.length) { %> <%
+		data.forEach(collection => { %>
+		<article>
+			<picture>
+				<source
+					srcset="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>"
+					alt="<%= collection.attributes.title %>"
+					width="320"
+					height="320"
+					loading="lazy"
+				/>
+				<img
+					src="/public<%= imageFiles[mainVisuals[collection.relationships.mainVisual.data.id]] %>"
+					alt="<%= collection.attributes.title %>"
+					width="320"
+					height="320"
+					loading="lazy"
+				/>
+			</picture>
+
+			<h2><%= collection.attributes.title %></h2>
+			<p><%= collection.attributes.intro %></p>
+			<a
+				id="<%= collection.attributes.slug %>"
+				class="default-link"
+				href="/collection/<%= collection.attributes.slug %>"
+			>
+				Ga naar deze show
+				<svg
+					xmlns="http://www.w3.org/2000/svg"
+					class="icon icon-tabler icon-tabler-player-play"
+					width="24"
+					height="24"
+					viewBox="0 0 24 24"
+					stroke-width="2"
+					stroke="currentColor"
+					fill="none"
+					stroke-linecap="round"
+					stroke-linejoin="round"
+				>
+					<path
+						stroke="none"
+						d="M0 0h24v24H0z"
+						fill="none"
+					></path>
+					<path d="M7 4v16l13 -8z"></path>
+				</svg>
+			</a>
+		</article>
+		<% }); %> <% } %>
+```
+
+
 
 ### css
 
@@ -87,9 +143,7 @@ interfaceBackClick.addEventListener("click", (event) => {
 ```
 
 ### node
-
-### express
-
+Dit project gebruikt node als basis
 
 ## Installatie
 <!-- Bij Instalatie staat hoe een andere developer aan jouw repo kan werken -->
