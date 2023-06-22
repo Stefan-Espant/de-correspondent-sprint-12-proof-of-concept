@@ -496,6 +496,19 @@ em {
 
     .index article {
         background-color: var(--color-secundary-50);
+        border: 1px solid var(--color-secundary-50);
+    }
+
+    a {
+        border: 1px solid var(--color-secundary-50);
+    }
+
+    .index-animation lottie-player {
+        background-color: var(--color-secundary-0);
+    }
+
+    .collection-episodes button {
+        background-color: var(--color-secundary-125);
     }
 }
 
